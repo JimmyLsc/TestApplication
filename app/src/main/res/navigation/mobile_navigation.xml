@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/event_layout">
+
+
+    <fragment
+        android:id="@+id/event_layout"
+        android:name="com.example.testapplication4.EventFragment"
+        android:label="@string/title_event"
+        tools:layout="@layout/event_fragment" />
+    <fragment
+        android:id="@+id/people_layout"
+        android:name="com.example.testapplication4.PeopleFragment"
+        android:label="@string/title_people"
+        tools:layout="@layout/people_fragment" />
+
+</navigation>

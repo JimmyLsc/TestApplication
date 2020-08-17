@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="add_people_button_id">0</integer>
+    <integer name="delete_people_button_id">1</integer>
+    <integer name="add_event_button_id">2</integer>
+    <integer name="delete_event_button_id">3</integer>
+</resources>

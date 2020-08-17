@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="event"
+            type="com.example.testapplication4.Event" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textAlignment="center"
+        >
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{event.getName()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/event_owner"
+            android:textSize="13pt"/>
+
+        <TextView
+            android:id="@+id/event_owner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{event.getOwner().getName()}"
+            app:layout_constraintStart_toEndOf="@id/event_name"
+            app:layout_constraintEnd_toStartOf="@id/event_fee"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="13pt"/>
+
+        <TextView
+            android:id="@+id/event_fee"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@{String.valueOf((float)(Math.round(event.getFee()*100)/100))}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/event_owner"
+            android:textSize="13pt"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

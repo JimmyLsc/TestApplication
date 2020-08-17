@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestApplication4</string>
+    <string name="title_people">People</string>
+    <string name="title_event">Event</string>
+</resources>
